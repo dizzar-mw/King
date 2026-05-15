@@ -1,21 +1,67 @@
-<html>
-  <head>
-    <title >Kings man. / Home boy</title>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizzar mw</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    
-  </head>
+    <nav class="navbar">
+        <div class="logo">Dizzar mw</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('artists')">Artists</a></li>
+            <li><a href="#" onclick="showPage('upload')">Upload</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+        </ul>
+        <div class="theme-controls">
+            <select id="theme-select" onchange="changeTheme(this.value)">
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
+                <option value="hacker">Hacker Mode</option>
+            </select>
+            <button id="admin-btn" class="hidden" onclick="checkAdmin()">[ADMIN]</button>
+        </div>
+    </nav>
 
+    <main id="content">
+        <section id="home" class="page-section active">
+            <h1>Welcome to Dizzar mw</h1>
+            <p>Malawian music excellence.</p>
+        </section>
 
-  <body>
-    <h1>this is real Drop Mw. </h1>
+        <section id="artists" class="page-section">
+            <h1>Featured Artists</h1>
+            <div class="artist-grid">
+                </div>
+        </section>
 
-    <centre>#filiru</centre>
-  </body>
+        <section id="upload" class="page-section">
+            <h1>Upload Music</h1>
+            <div class="upload-box">Drag and drop files here</div>
+        </section>
+
+        <section id="about" class="page-section">
+            <h1>About the Platform</h1>
+            <p>Dizzar mw is a neutral access point for musical talent.</p>
+        </section>
+    </main>
+
+    <footer class="bottom-player">
+        <div class="player-info">
+            <div class="disc-icon">💿</div>
+            <span>Now Playing: Select a track</span>
+        </div>
+        <div class="player-controls">
+            <button>⏮</button>
+            <button class="play-btn">▶</button>
+            <button>⏭</button>
+        </div>
+        <div id="hacker-clock" class="hidden">00:00:00</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
-<style>
-
-  Body{
-    Background : black;
-    Color : aqua;
-  } 
-</style>
